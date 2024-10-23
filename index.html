@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *::before,
+        *::after,
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .d-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .container {
+            width: 1440px;
+            margin-inline: auto;
+        }
+        .m-y_AND_x{
+            margin-inline: auto;
+            margin-block: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <template class="js-list-item-temp">
+        <li class="js-list-item"></li>
+    </template>
+    <div class="container">
+        <div class="js-btn-box d-flex m-y_AND_x">
+            <button class="js-users-get-btn">Users</button>
+            <button class="js-posts-get-btn">Posts</button>
+            <button class="js-comments-get-btn">Comments</button>
+        </div>
+        <div class="js-lists-box d-flex m-y_AND_x">
+            <ul class="js-users-list"></ul>
+            <ul class="js-posts-list"></ul>
+            <ul class="js-comments-list"></ul>
+        </div>
+    </div>
+    <script src="/index.js"></script>
+</body>
+
+</html>
