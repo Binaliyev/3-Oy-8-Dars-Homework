@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+.aboutBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.aboutUserBox {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.aboutPostBox {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.aboutCommentBox {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.listRender {
+    display: flex;
+    flex-direction: column;
+}
+p {
+    padding-bottom: 5px;
+}
+button {
+    padding: 5px 30px;
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+.clearBtnBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

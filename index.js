@@ -3,6 +3,7 @@ const elListBox = document.querySelector(".js-lists-box");
 const elUsersList = elListBox.querySelector(".js-users-list");
 const elPostsList = elListBox.querySelector(".js-posts-list");
 const elCommentsList = elListBox.querySelector(".js-comments-list");
+const elClearBtn = document.querySelector(".js-clear-btn"); 
 const elListItemTemp = document.querySelector(".js-list-item-temp").content;
 
 const handleGetFn = (api, ap) => fetch(api).then(res => res.json()).then(arr => handleRenderFn(arr, ap)).catch(err => console.log(err.message));
@@ -44,6 +45,12 @@ function handleRenderFn(arr, { users, posts, comments }) {
     }
 }
 
+const handleClearBtn = () => {
+    elUsersList.innerHTML = "";
+    elPostsList.innerHTML = "";
+    elCommentsList.innerHTML = "";
+}
+
 const handleClick = evt => {
     if(evt.target.matches(".js-list-item")){
         const id = evt.target.dataset.id;
@@ -64,3 +71,4 @@ elBtnBox.addEventListener("click", evt => {
     }
 })
 elUsersList.addEventListener("click", handleClick)
+elClearBtn.addEventListener("click", handleClearBtn)
